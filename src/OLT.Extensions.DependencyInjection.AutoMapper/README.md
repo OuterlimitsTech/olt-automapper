@@ -1,3 +1,3 @@
-﻿[![CI](https://github.com/OuterlimitsTech/olt-dotnet-core/actions/workflows/build.yml/badge.svg)](https://github.com/OuterlimitsTech/olt-dotnet-core/actions/workflows/build.yml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=OuterlimitsTech_olt-dotnet-core&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=OuterlimitsTech_olt-dotnet-core)
+﻿[![CI](https://github.com/OuterlimitsTech/olt-automapper/actions/workflows/build.yml/badge.svg)](https://github.com/OuterlimitsTech/olt-automapper/actions/workflows/build.yml) 
 
-## IServiceCollection extensions to add AutoMapper maps and OLT Adapter Resolver for AutoMapper
+## IServiceCollection extensions to scan/add AutoMapper maps and with DI registration of the OLT AutoMapper Adapter Resolver

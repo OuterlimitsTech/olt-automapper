@@ -1,16 +1,13 @@
-﻿using AutoMapper;
+﻿//using AutoMapper;
 
-namespace OLT.Core
-{
-    public interface IOltAdapterMap : IProfileExpression
-    {
-        void CreateMaps();
-    }
+//namespace OLT.Core
+//{
+//    /// <summary>
+//    /// Marker interface for Automapper Adapter Map Definition that defines <seealso cref="IProfileExpression"/>
+//    /// </summary>
+//    public interface IOltAdapterMap<TSource, TDestination> : IProfileExpression
+//    {
+        
+//    }
 
-
-    public interface IOltAdapterMap<TSource, TDestination> : IOltAdapterMap
-    {
-        void BuildMap(IMappingExpression<TSource, TDestination> mappingExpression);
-    }
-
-}
+//}

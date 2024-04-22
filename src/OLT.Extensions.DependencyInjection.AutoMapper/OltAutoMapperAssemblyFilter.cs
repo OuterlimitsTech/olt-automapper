@@ -1,5 +1,8 @@
 ﻿namespace OLT.Core
 {
+    /// <summary>
+    /// Assembly Scan Filter
+    /// </summary>
     public class OltAutoMapperAssemblyFilter : OltAssemblyFilter
     {
         /// <summary>
