@@ -181,7 +181,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests
                 Assert.Equal(obj3.Last, obj2Result.Name!.Last);
                 adapterResolver.Map<AdapterObject2, AdapterObject3>(obj2Result, new AdapterObject3()).Should().BeEquivalentTo(obj3);
 
-                Assert.Throws<OltAdapterNotFoundException<NeverAdapterObject, AdapterObject1>>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new NeverAdapterObject(), new AdapterObject1()));
+                Assert.Throws<OltAdapterNotFoundException>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new NeverAdapterObject(), new AdapterObject1()));
             }
         }
 
@@ -208,7 +208,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests
                 adapterResolver.Map<AdapterObject2, AdapterObject3>(obj2Result).Should().BeEquivalentTo(obj3Values);
                 
 
-                Assert.Throws<OltAdapterNotFoundException<NeverAdapterObject, AdapterObject1>>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new List<NeverAdapterObject>()));
+                Assert.Throws<OltAdapterNotFoundException>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new List<NeverAdapterObject>()));
 
             }
         }
