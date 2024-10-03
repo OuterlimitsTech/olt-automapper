@@ -1,23 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-		<TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net6.0</TargetFrameworks>
     <RootNamespace>OLT.Core</RootNamespace>
     <Description>DataAdapters AutoMapper Library</Description>
     <ProjectGuid>07F972FB-E132-4FBF-B52F-DC18A2FFB622</ProjectGuid>
+		<Nullable>enable</Nullable>
 		<LangVersion>Latest</LangVersion>
   </PropertyGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net6.0'">
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net7.0'">
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net8.0'">
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="[13.0.0, 14.0.0)" />

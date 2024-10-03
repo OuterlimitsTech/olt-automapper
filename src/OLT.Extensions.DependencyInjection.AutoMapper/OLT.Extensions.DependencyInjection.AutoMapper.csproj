@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net6.0</TargetFrameworks>
 		<RootNamespace>OLT.Core</RootNamespace>
 		<Description>Auto Mapper Extensions for Data Adapters</Description>
 		<ProjectGuid>c956c04f-4523-4f68-961c-8174803aa073</ProjectGuid>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -12,18 +13,6 @@
 		<PackageReference Include="AutoMapper.Collection" Version="[10.0.0, 11.0.0)" />
 		<PackageReference Include="OLT.Extensions.General" Version="[8.2.1, 9.0.0)" />
 	</ItemGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net6.0'">
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net7.0'">
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net8.0'">
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\OLT.DataAdapters.AutoMapper\OLT.DataAdapters.AutoMapper.csproj" />
