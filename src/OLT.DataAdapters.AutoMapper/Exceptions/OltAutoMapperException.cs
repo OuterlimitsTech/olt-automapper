@@ -8,7 +8,7 @@ namespace OLT.Core
     /// </summary>
     /// <typeparam name="TSource"></typeparam>
     /// <typeparam name="TDestination"></typeparam>
-    public class OltAutoMapperException<TSource, TDestination> : OltException
+    public class OltAutoMapperException<TSource, TDestination> : Exception
     {
         /// <summary>
         /// Automapper Exception
