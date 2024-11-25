@@ -7,14 +7,14 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Assets.Models
     public class AdapterObject2 : IAdapterObject
     {
         public int ObjectId { get; set; }
-        public OltPersonName? Name { get; set; }
+        public PersonName? Name { get; set; }
 
         public static AdapterObject2 FakerData()
         {
             var result = new AdapterObject2
             {
                 ObjectId = Faker.RandomNumber.Next(3000, 4000),
-                Name = new OltPersonName
+                Name = new PersonName
                 {
                     First = Faker.Name.First(),
                     Last = Faker.Name.Last(),

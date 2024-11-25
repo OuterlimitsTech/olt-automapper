@@ -139,7 +139,7 @@ namespace OLT.Core
             {
                 try
                 {
-                    return Mapper.Map<IEnumerable<TSource>, IEnumerable<TDestination>>(source.AsEnumerable()).ToList();
+                    return Mapper.Map<IEnumerable<TSource>, IEnumerable<TDestination>>(source.AsEnumerable())?.ToList() ?? new List<TDestination>();
                 }
                 catch (Exception exception)
                 {
@@ -161,12 +161,12 @@ namespace OLT.Core
         /// <remarks>
         /// Falls back to <seealso cref="OltAdapterResolver.Map{TSource, TDestination}(TSource, TDestination)"/>
         /// </remarks>
-        public override TDestination Map<TSource, TDestination>(TSource source, TDestination destination)
+        public override TDestination? Map<TSource, TDestination>(TSource source, TDestination destination) where TDestination : default
         {
             if (HasAutoMap<TSource, TDestination>())
             {
                 try
-                {                    
+                {
                     return Mapper.Map(source, destination);
                 }
                 catch (Exception exception)

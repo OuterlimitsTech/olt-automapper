@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace OLT.DataAdapters.AutoMapper.Tests.Assets.Models
 {
-    public class AdapterObject3 : OltPersonName, IAdapterObject
+    public class AdapterObject3 : PersonName, IAdapterObject
     {
         public int ObjectId { get; set; }
 

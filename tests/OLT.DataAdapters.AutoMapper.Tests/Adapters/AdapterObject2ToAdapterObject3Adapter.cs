@@ -14,7 +14,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Adapters
 
         public override void Map(AdapterObject3 source, AdapterObject2 destination)
         {
-            destination.Name = new OltPersonName();
+            destination.Name = new PersonName();
             destination.ObjectId = source.ObjectId;
             destination.Name.First = source.First;
             destination.Name.Last = source.Last;

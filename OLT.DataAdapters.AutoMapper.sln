@@ -5,15 +5,13 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OLT.DataAdapters.AutoMapper", "src\OLT.DataAdapters.AutoMapper\OLT.DataAdapters.AutoMapper.csproj", "{07F972FB-E132-4FBF-B52F-DC18A2FFB622}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OLT.DataAdapters", "OLT.DataAdapters", "{53DBDC13-6AF1-4201-8E82-B03646DFEF96}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OLT.DataAdapters.AutoMapper.Tests", "tests\OLT.DataAdapters.AutoMapper.Tests\OLT.DataAdapters.AutoMapper.Tests.csproj", "{CADA4C2D-8842-46DB-899F-F67A32459A57}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OLT.Extensions.DependencyInjection", "OLT.Extensions.DependencyInjection", "{DC974B28-5010-40DC-8076-7599315854AC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OLT.Extensions.DependencyInjection.AutoMapper", "src\OLT.Extensions.DependencyInjection.AutoMapper\OLT.Extensions.DependencyInjection.AutoMapper.csproj", "{C956C04F-4523-4F68-961C-8174803AA073}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OLT.Extensions.DependencyInjection.AutoMapper.Tests", "tests\OLT.Extensions.DependencyInjection.AutoMapper.Tests\OLT.Extensions.DependencyInjection.AutoMapper.Tests.csproj", "{039F7F6B-1C25-4F11-B19D-B678F228635D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D6AD39E5-20A1-48BA-A4BC-CC192F55B453}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0D8B221D-7865-4CEC-B2FA-77BF7F012A5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,19 +31,14 @@ Global
 		{C956C04F-4523-4F68-961C-8174803AA073}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C956C04F-4523-4F68-961C-8174803AA073}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C956C04F-4523-4F68-961C-8174803AA073}.Release|Any CPU.Build.0 = Release|Any CPU
-		{039F7F6B-1C25-4F11-B19D-B678F228635D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{039F7F6B-1C25-4F11-B19D-B678F228635D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{039F7F6B-1C25-4F11-B19D-B678F228635D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{039F7F6B-1C25-4F11-B19D-B678F228635D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{07F972FB-E132-4FBF-B52F-DC18A2FFB622} = {53DBDC13-6AF1-4201-8E82-B03646DFEF96}
-		{CADA4C2D-8842-46DB-899F-F67A32459A57} = {53DBDC13-6AF1-4201-8E82-B03646DFEF96}
-		{C956C04F-4523-4F68-961C-8174803AA073} = {DC974B28-5010-40DC-8076-7599315854AC}
-		{039F7F6B-1C25-4F11-B19D-B678F228635D} = {DC974B28-5010-40DC-8076-7599315854AC}
+		{07F972FB-E132-4FBF-B52F-DC18A2FFB622} = {D6AD39E5-20A1-48BA-A4BC-CC192F55B453}
+		{CADA4C2D-8842-46DB-899F-F67A32459A57} = {0D8B221D-7865-4CEC-B2FA-77BF7F012A5E}
+		{C956C04F-4523-4F68-961C-8174803AA073} = {D6AD39E5-20A1-48BA-A4BC-CC192F55B453}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E223F339-A690-4201-BE01-4B838E79657B}

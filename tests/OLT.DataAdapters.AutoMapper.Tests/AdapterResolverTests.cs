@@ -82,7 +82,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests
                     .Select(s => new AdapterObject2
                     {
                         ObjectId = s.ObjectId,
-                        Name = new OltPersonName
+                        Name = new PersonName
                         {
                             First = s.FirstName,
                             Last = s.LastName,
@@ -103,38 +103,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests
             }
         }
 
-        [Fact]
-        public void ProjectToPagedTests()
-        {
-            using (var provider = BuildProvider())
-            {
-                var adapterResolver = provider.GetRequiredService<IOltAdapterResolver>();
-                var pagingParams = new OltPagingParams { Page = 1, Size = 25 };
-
-                var obj1Values = AdapterObject1.FakerList(56);
-                var expected = obj1Values.Select(s => new AdapterObject2
-                {
-                    ObjectId = s.ObjectId,
-                    Name = new OltPersonName
-                    {
-                        First = s.FirstName,
-                        Last = s.LastName,
-                    }
-                })
-                    .OrderBy(p => p.Name!.First)
-                    .ThenBy(p => p.Name!.Last)
-                    .ToList();
-
-
-                var obj2Result = adapterResolver.ProjectTo<AdapterObject1, AdapterObject2>(obj1Values.AsQueryable()).ToList();
-                obj2Result.Should().BeEquivalentTo(expected, opt => opt.WithStrictOrdering());
-
-                var paged = obj2Result.AsQueryable().ToPaged(pagingParams);
-                var expectedPaged = expected.AsQueryable().ToPaged(pagingParams);
-                paged.Should().BeEquivalentTo(expectedPaged, opt => opt.WithStrictOrdering());
-            }
-        }
-
+       
         [Fact]
         public void ApplyDefaultOrderByTest()
         {
@@ -181,7 +150,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests
                 Assert.Equal(obj3.Last, obj2Result.Name!.Last);
                 adapterResolver.Map<AdapterObject2, AdapterObject3>(obj2Result, new AdapterObject3()).Should().BeEquivalentTo(obj3);
 
-                Assert.Throws<OltAdapterNotFoundException>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new NeverAdapterObject(), new AdapterObject1()));
+                Assert.Throws<OltAdapterNotFoundException<NeverAdapterObject, AdapterObject1>>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new NeverAdapterObject(), new AdapterObject1()));
             }
         }
 
@@ -208,7 +177,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests
                 adapterResolver.Map<AdapterObject2, AdapterObject3>(obj2Result).Should().BeEquivalentTo(obj3Values);
                 
 
-                Assert.Throws<OltAdapterNotFoundException>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new List<NeverAdapterObject>()));
+                Assert.Throws<OltAdapterNotFoundException<NeverAdapterObject, AdapterObject1>>(() => adapterResolver.Map<NeverAdapterObject, AdapterObject1>(new List<NeverAdapterObject>()));
 
             }
         }

@@ -7,7 +7,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Assets.Models
     {
         public int ObjectId { get; set; }
         public string? Street { get; set; }
-        public List<OltPersonName> Names { get; set; } = new List<OltPersonName>();
+        public List<PersonName> Names { get; set; } = new List<PersonName>();
 
         public static AdapterObject8 FakerData(int numberNames)
         {
@@ -17,10 +17,10 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Assets.Models
                 Street = Faker.Address.StreetAddress()                
             };
 
-            result.Names = new List<OltPersonName>();
+            result.Names = new List<PersonName>();
             for (int i = 0; i < numberNames; i++)
             {
-                result.Names.Add(new OltPersonName
+                result.Names.Add(new PersonName
                 {
                     First = Faker.Name.First(),
                     Last = Faker.Name.Last(),

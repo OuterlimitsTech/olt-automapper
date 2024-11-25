@@ -9,7 +9,7 @@ using FluentAssertions;
 
 namespace OLT.Extensions.DependencyInjection.AutoMapper.Tests
 {
-    public class UnitTests
+    public class OltServiceCollectionAutoMapperExtensionTests
     {
         [Fact]
         public void ExceptionTest()

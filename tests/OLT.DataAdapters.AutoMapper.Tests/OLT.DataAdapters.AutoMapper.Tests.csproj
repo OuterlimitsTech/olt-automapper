@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\OLT.DataAdapters.AutoMapper\OLT.DataAdapters.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\src\OLT.Extensions.DependencyInjection.AutoMapper\OLT.Extensions.DependencyInjection.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>

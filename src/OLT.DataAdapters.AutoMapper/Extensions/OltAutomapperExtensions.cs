@@ -6,10 +6,13 @@ using System.Text;
 
 namespace OLT.Core
 {
-    public static class OltAutomapperExtensions 
+    /// <summary>
+    /// Provides extension methods for AutoMapper mapping expressions.
+    /// </summary>
+    public static class OltAutomapperExtensions
     {
         /// <summary>
-        /// Sets default OrderBy of <typeparamref name="TSource"/> for <seealso cref="IOltPaged"/>
+        /// Sets default OrderBy of <typeparamref name="TSource"/> for Paged resultset
         /// </summary>
         /// <typeparam name="TSource"></typeparam>
         /// <typeparam name="TDestination"></typeparam>

@@ -6,6 +6,6 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Assets.Models
     {
         public int ObjectId { get; set; }
         public string? StreetAddress { get; set; }
-        public OltPersonName? Name { get; set; }
+        public PersonName? Name { get; set; }
     }
 }
