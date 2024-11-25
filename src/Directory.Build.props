@@ -3,7 +3,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <Company>OuterLimits Technologies, Inc</Company>
-    <Product>OLT AutoMapper DataAdapter</Product>
+    <Product>OLT AutoMapper DataAdapters</Product>
     <Authors>Chris Straw</Authors>
     <Copyright>Copyright © 2003-2024, OuterLimits Technologies, Inc Plainfield, IN</Copyright>
     <RepositoryUrl>https://github.com/OuterlimitsTech/olt-automapper</RepositoryUrl>
