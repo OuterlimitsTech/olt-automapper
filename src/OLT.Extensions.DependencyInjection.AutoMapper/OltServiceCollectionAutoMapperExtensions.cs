@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Reflection;
-using System.Reflection.Metadata;
-using AutoMapper;
-using AutoMapper.EquivalencyExpression;
+﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using OLT.Utility.AssemblyScanner;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace OLT.Core
 {
@@ -92,22 +88,14 @@ namespace OLT.Core
         [Obsolete("Use AddOltAutoMapper")]
         public static IServiceCollection AddOltInjectionAutoMapper(this IServiceCollection services, List<Assembly> includeAssembliesScan, Action<IMapperConfigurationExpression>? configAction, ServiceLifetime serviceLifetime = ServiceLifetime.Transient, OltAutoMapperAssemblyFilter? filter = null)
         {
-            if (services == null)
-            {
-                throw new ArgumentNullException(nameof(services));
-            }
-
-            if (includeAssembliesScan == null)
-            {
-                includeAssembliesScan = new List<Assembly>();
-            }
-
+            ArgumentNullException.ThrowIfNull(services);
+            includeAssembliesScan = includeAssembliesScan ?? new List<Assembly>();
             filter = filter ?? new OltAutoMapperAssemblyFilter();
 
             var baseAssemblies = new List<Assembly>
-                {
-                    Assembly.GetExecutingAssembly()
-                };
+            {
+                Assembly.GetExecutingAssembly()
+            };
 
             var entryAssembly = Assembly.GetEntryAssembly();
             if (entryAssembly != null)
@@ -115,26 +103,24 @@ namespace OLT.Core
                 baseAssemblies.Add(entryAssembly);
             }
 
-            baseAssemblies.AddRange(includeAssembliesScan);
-            //var assembliesToScan = baseAssemblies.GetAllReferencedAssemblies().ToList();
-            //filter.RemoveAllExclusions(assembliesToScan); 
-
-            
-            services.AddSingleton<IOltAdapterResolver, OltAdapterResolverAutoMapper>();
+            baseAssemblies.AddRange(includeAssembliesScan);            
 
             var assemblyScanner = new OLT.Utility.AssemblyScanner.OltAssemblyScanBuilder();
             assemblyScanner
                 .IncludeAssembly(baseAssemblies)
                 .DeepScan()
+                .ExcludeFilter(filter.ExcludeFilters.ToArray())
+                .IncludeFilter(filter.Filters.ToArray())
                 .ExcludeAutomapper()                
                 .ExcludeMicrosoft();
 
+
             var assembliesToScan = assemblyScanner.Build();
-            services.AddAutoMapper(cfg =>
-            {
-                cfg.AddCollectionMappers();
-                configAction?.Invoke(cfg);
-            }, assembliesToScan, serviceLifetime);
+
+            var builder = new OltAutoMapperBuilder(services);
+            builder.WithServiceLifetime(serviceLifetime);
+            builder.AddMaps(assembliesToScan);
+            builder.Build(configAction);
             return services;
         }
     }

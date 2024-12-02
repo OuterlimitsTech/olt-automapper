@@ -48,6 +48,19 @@ public class OltAutoMapperBuilder
         return this;
     }
 
+
+    /// <summary>
+    /// Add mapping definitions contained in assemblies.
+    /// Looks for <see cref="Profile" /> definitions and classes decorated with <see cref="AutoMapAttribute" />
+    /// </summary>
+    /// <param name="assembliesToScan">Assemblies containing mapping definitions</param>
+    public virtual OltAutoMapperBuilder AddMaps(IEnumerable<Assembly> assembliesToScan)
+    {
+        _scanAssemblies.AddRange(assembliesToScan);
+        return this;
+    }
+
+
     /// <summary>
     /// Add mapping definitions contained in assemblies.
     /// Looks for <see cref="Profile" /> definitions and classes decorated with <see cref="AutoMapAttribute" />
