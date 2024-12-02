@@ -23,7 +23,7 @@ To install the [![Nuget](https://img.shields.io/nuget/v/OLT.DataAdapters.AutoMap
 dotnet add package OLT.DataAdapters.AutoMapper
 ```
 
-To install the extensions the [![Nuget](https://img.shields.io/nuget/v/OLT.Extensions.DependencyInjection.AutoMapper)](https://www.nuget.org/packages/OLT.Extensions.DependencyInjection.AutoMapper) package, add the following package reference to your project file:
+To install the [![Nuget](https://img.shields.io/nuget/v/OLT.Extensions.DependencyInjection.AutoMapper)](https://www.nuget.org/packages/OLT.Extensions.DependencyInjection.AutoMapper) extensions package, add the following package reference to your project file:
 
 ```bash
 dotnet add package OLT.Extensions.DependencyInjection.AutoMapper
