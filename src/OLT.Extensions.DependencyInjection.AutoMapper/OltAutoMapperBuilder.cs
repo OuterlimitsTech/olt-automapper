@@ -12,8 +12,8 @@ namespace OLT.Core;
 /// </summary>
 public class OltAutoMapperBuilder
 {
-    private List<Assembly> _scanAssemblies = new List<Assembly>();
-    private List<Profile> _profiles = new List<Profile>();
+    private readonly List<Assembly> _scanAssemblies = new List<Assembly>();
+    private readonly List<Profile> _profiles = new List<Profile>();
 
     /// <summary>
     /// The service collection for dependency injection.
