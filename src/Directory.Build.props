@@ -3,7 +3,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <Company>OuterLimits Technologies, Inc</Company>
-    <Product>OLT AutoMapper DataAdapter</Product>
+    <Product>OLT AutoMapper DataAdapters</Product>
     <Authors>Chris Straw</Authors>
     <Copyright>Copyright © 2003-2024, OuterLimits Technologies, Inc Plainfield, IN</Copyright>
     <RepositoryUrl>https://github.com/OuterlimitsTech/olt-automapper</RepositoryUrl>
@@ -25,17 +25,17 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="README.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
+	<ItemGroup>
+		<None Include="..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+	
   <PropertyGroup>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
     <!-- <NoWarn>$(NoWarn);1591</NoWarn>

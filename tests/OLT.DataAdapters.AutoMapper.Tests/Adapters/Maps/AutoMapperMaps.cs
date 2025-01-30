@@ -10,8 +10,8 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Adapters
         public AutoMapperMaps()
         {
             BuildMap(CreateMap<AdapterObject1, AdapterObject2>()).WithOrderBy(p => p.OrderBy(o => o.FirstName).ThenBy(o => o.LastName));            
-            BuildMap(CreateMap<AdapterObject1, OltPersonName>());
-            BuildMap(CreateMap<AdapterObject3, OltPersonName>());
+            BuildMap(CreateMap<AdapterObject1, PersonName>());
+            BuildMap(CreateMap<AdapterObject3, PersonName>());
         }
 
 
@@ -26,7 +26,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Adapters
             return mappingExpression;
         }
 
-        protected virtual IMappingExpression<AdapterObject1, OltPersonName> BuildMap(IMappingExpression<AdapterObject1, OltPersonName> mappingExpression)
+        protected virtual IMappingExpression<AdapterObject1, PersonName> BuildMap(IMappingExpression<AdapterObject1, PersonName> mappingExpression)
         {
             mappingExpression
                 .ForMember(f => f.First, opt => opt.MapFrom(t => t.FirstName))
@@ -38,7 +38,7 @@ namespace OLT.DataAdapters.AutoMapper.Tests.Adapters
         }
 
 
-        protected virtual IMappingExpression<AdapterObject3, OltPersonName> BuildMap(IMappingExpression<AdapterObject3, OltPersonName> mappingExpression)
+        protected virtual IMappingExpression<AdapterObject3, PersonName> BuildMap(IMappingExpression<AdapterObject3, PersonName> mappingExpression)
         {
             mappingExpression
                 .ForMember(f => f.First, opt => opt.MapFrom(t => t.First))

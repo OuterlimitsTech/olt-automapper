@@ -7,7 +7,6 @@
 
   <ItemGroup>
 		<PackageReference Include="Faker.Net" Version="2.0.154" />
-		<PackageReference Include="FluentAssertions" Version="6.12.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="xunit" Version="2.6.3" />
@@ -23,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\OLT.DataAdapters.AutoMapper\OLT.DataAdapters.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\src\OLT.Extensions.DependencyInjection.AutoMapper\OLT.Extensions.DependencyInjection.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>
