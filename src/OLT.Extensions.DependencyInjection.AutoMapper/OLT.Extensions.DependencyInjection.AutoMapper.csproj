@@ -11,7 +11,7 @@
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="[13.0.0, 14.0.0)" />
 		<PackageReference Include="AutoMapper.Collection" Version="[10.0.0, 11.0.0)" />
-		<PackageReference Include="OLT.Utility.AssemblyScanner" Version="1.0.0" />
+		<PackageReference Include="OLT.Utility.AssemblyScanner" Version="1.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
