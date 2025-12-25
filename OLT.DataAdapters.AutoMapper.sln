@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34309.116
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OLT.DataAdapters.AutoMapper", "src\OLT.DataAdapters.AutoMapper\OLT.DataAdapters.AutoMapper.csproj", "{07F972FB-E132-4FBF-B52F-DC18A2FFB622}"
 EndProject
@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".workflow", ".workflow", "{4633489B-3578-43A5-BBB6-8B4AE58EA573}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build.yml = .github\workflows\build.yml
+		.github\dependabot.yml = .github\dependabot.yml
 		.github\workflows\release.yml = .github\workflows\release.yml
 	EndProjectSection
 EndProject
