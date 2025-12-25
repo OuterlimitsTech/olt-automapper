@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="[15.0.0, 16.0.0)" />
-    <PackageReference Include="OLT.DataAdapters" Version="9.0.0" />
+    <PackageReference Include="OLT.DataAdapters" Version="10.0.0" />
   </ItemGroup>
 
 
