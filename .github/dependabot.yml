@@ -8,3 +8,13 @@ updates:
       - "dependencies"
       - "github-actions"
 
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "AutoMapper"
+      - dependency-name: "AutoMapper.Collection"  
+    labels:
+      - "dependencies"
+      - "nuget"
