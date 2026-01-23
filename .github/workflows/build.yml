@@ -12,6 +12,7 @@ on:
 env:
   SOURCE_DIRECTORY: ${{ github.workspace }}
   SOLUTION_FILE: "OLT.DataAdapters.AutoMapper.sln"
+  AUTOMAPPER_LICENSE_KEY: ${{ secrets.AUTOMAPPER_LICENSE_KEY }}
 
 jobs:
   build:
