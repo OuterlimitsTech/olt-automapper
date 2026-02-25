@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
 		<RootNamespace>OLT.Core</RootNamespace>
 		<Description>Auto Mapper Extensions for Data Adapters</Description>
 		<ProjectGuid>c956c04f-4523-4f68-961c-8174803aa073</ProjectGuid>
@@ -9,9 +9,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AutoMapper" Version="[14.0.0, 15.0.0)" />
-		<PackageReference Include="AutoMapper.Collection" Version="[11.0.0, 12.0.0)" />
-		<PackageReference Include="OLT.Utility.AssemblyScanner" Version="1.0.1" />
+		<PackageReference Include="AutoMapper" Version="[15.0.1, 16.0.0)" />
+		<PackageReference Include="AutoMapper.Collection" Version="[12.0.0, 13.0.0)" />
 	</ItemGroup>
 
 	<ItemGroup>

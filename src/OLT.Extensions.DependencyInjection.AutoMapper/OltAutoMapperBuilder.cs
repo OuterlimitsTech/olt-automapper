@@ -85,13 +85,17 @@ public class OltAutoMapperBuilder
     /// <summary>
     /// Builds the AutoMapper configuration and registers the necessary services.
     /// </summary>
+    /// <param name="licenseKey">License key for AutoMapper.</param>
     /// <param name="configAction">An optional action to configure the AutoMapper.</param>
-    public virtual void Build(Action<IMapperConfigurationExpression>? configAction = null)
+    public virtual void Build(string licenseKey, Action<IMapperConfigurationExpression>? configAction = null)
     {
+        ArgumentException.ThrowIfNullOrEmpty(licenseKey);
+
         _services.AddSingleton<IOltAdapterResolver, OltAdapterResolverAutoMapper>();
 
         _services.AddAutoMapper(cfg =>
         {
+            cfg.LicenseKey = licenseKey;
             cfg.AddCollectionMappers();
             cfg.AddProfiles(_profiles);
             configAction?.Invoke(cfg);

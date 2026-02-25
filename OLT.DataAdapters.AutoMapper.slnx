@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/.solution/">
+    <File Path=".config/dotnet-tools.json" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/.workflow/">
+    <File Path=".github/dependabot.yml" />
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/release.yml" />
+  </Folder>
+  <Folder Name="/src/">
+    <File Path="src/Directory.Build.props" />
+    <Project Path="src/OLT.DataAdapters.AutoMapper/OLT.DataAdapters.AutoMapper.csproj" />
+    <Project Path="src/OLT.Extensions.DependencyInjection.AutoMapper/OLT.Extensions.DependencyInjection.AutoMapper.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/OLT.DataAdapters.AutoMapper.Tests/OLT.DataAdapters.AutoMapper.Tests.csproj" />
+  </Folder>
+</Solution>
